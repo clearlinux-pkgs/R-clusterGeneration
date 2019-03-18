@@ -4,7 +4,7 @@
 #
 Name     : R-clusterGeneration
 Version  : 1.3.4
-Release  : 8
+Release  : 9
 URL      : https://cran.r-project.org/src/contrib/clusterGeneration_1.3.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/clusterGeneration_1.3.4.tar.gz
 Summary  : Random Cluster Generation (with Specified Degree of Separation)
@@ -23,10 +23,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552756518
+export SOURCE_DATE_EPOCH=1552917728
 
 %install
-export SOURCE_DATE_EPOCH=1552756518
+export SOURCE_DATE_EPOCH=1552917728
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
