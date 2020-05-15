@@ -4,35 +4,43 @@
 #
 Name     : R-clusterGeneration
 Version  : 1.3.4
-Release  : 17
+Release  : 18
 URL      : https://cran.r-project.org/src/contrib/clusterGeneration_1.3.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/clusterGeneration_1.3.4.tar.gz
 Summary  : Random Cluster Generation (with Specified Degree of Separation)
 Group    : Development/Tools
 License  : GPL-2.0+
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
-No detailed description available
+for generating random clusters, generating random 
+        covariance/correlation matrices,
+        calculating a separation index (data and population version)
+        for pairs of clusters or cluster distributions, and 1-D and 2-D
+        projection plots to visualize clusters.  The package also
+        contains a function to generate random clusters based on
+        factorial designs with factors such as degree of separation,
+        number of clusters, number of variables, number of noisy
+        variables.
 
 %prep
 %setup -q -c -n clusterGeneration
+cd %{_builddir}/clusterGeneration
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571810734
+export SOURCE_DATE_EPOCH=1589529494
 
 %install
-export SOURCE_DATE_EPOCH=1571810734
+export SOURCE_DATE_EPOCH=1589529494
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
