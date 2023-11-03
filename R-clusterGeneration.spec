@@ -5,7 +5,7 @@
 #
 Name     : R-clusterGeneration
 Version  : 1.3.8
-Release  : 44
+Release  : 45
 URL      : https://cran.r-project.org/src/contrib/clusterGeneration_1.3.8.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/clusterGeneration_1.3.8.tar.gz
 Summary  : Random Cluster Generation (with Specified Degree of Separation)
